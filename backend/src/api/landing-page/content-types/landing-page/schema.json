@@ -1,0 +1,69 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "main": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.main"
+    },
+    "our_clients": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.clients"
+    },
+    "community": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.manage-community"
+    },
+    "info_1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.detail-box"
+    },
+    "ourMetrix": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.key-metrics"
+    },
+    "info_2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.detail-box"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.testimonials"
+    },
+    "marketing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cards-box"
+    },
+    "getDemo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.go-to-action"
+    }
+  }
+}

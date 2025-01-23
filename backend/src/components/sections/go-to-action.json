@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_go_to_actions",
+  "info": {
+    "displayName": "GoTo Action"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "goTo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.button"
+    }
+  }
+}
