@@ -5,7 +5,11 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
+import { SiteProvider } from "@/utils/context";
+import classNames from "classnames";
 import "@/styles/globals.css";
+import "@/styles/main.css";
+import Overlay from "@/components/Overlay";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +25,7 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  // const { isOpenMenu } = useSiteContext();
   const { locale } = await params;
   // Ensure that the incoming `locale` is valid
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,11 +39,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-        </NextIntlClientProvider>
+      <body className={classNames(inter.className)}>
+        <SiteProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
+          </NextIntlClientProvider>
+          <Overlay w="--half" />
+        </SiteProvider>
       </body>
     </html>
   );

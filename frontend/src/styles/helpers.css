@@ -1,3 +1,0 @@
-.hover-green {
-  @apply hover:text-green transition-colors duration-300;
-}

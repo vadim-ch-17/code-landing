@@ -78,7 +78,7 @@ export interface SectionsClients extends Struct.ComponentSchema {
     displayName: 'Clients';
   };
   attributes: {
-    client: Schema.Attribute.Component<'components.client', true>;
+    clients: Schema.Attribute.Component<'components.client', true>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };

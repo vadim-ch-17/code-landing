@@ -12,7 +12,7 @@
     "subtitle": {
       "type": "text"
     },
-    "client": {
+    "clients": {
       "type": "component",
       "repeatable": true,
       "component": "components.client"
