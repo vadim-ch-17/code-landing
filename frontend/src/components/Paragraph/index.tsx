@@ -4,6 +4,7 @@ interface ParagraphProps {
   children: React.ReactNode | string;
   classes?: string;
   type?: "xs" | "sm" | "md";
+  spacings?: "zero" | "xs" | "sm" | "md";
 }
 
 const Paragraph = ({ children, classes, type }: ParagraphProps) => {
@@ -13,8 +14,15 @@ const Paragraph = ({ children, classes, type }: ParagraphProps) => {
     md: "text-body-16-24",
   }[type || "md"];
 
+  const spacingsSize = {
+    zero: "mb-0",
+    xs: "mb-2",
+    sm: "mb-4",
+    md: "mb-8",
+  }[type || "md"];
   return (
-    <p className={classNames(" mb-8 text-lightPrimary", size, classes)}>
+    <p
+      className={classNames(" text-lightPrimary", size, spacingsSize, classes)}>
       {children}
     </p>
   );
