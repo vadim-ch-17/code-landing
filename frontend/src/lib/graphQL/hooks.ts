@@ -7,6 +7,7 @@ import {
   INFO_2_FRAGMENT,
   MARKETING_FRAGMENT,
   TESTIMONIAL_FRAGMENT,
+  GET_DEMO_FRAGMENT,
 } from "./fragments";
 
 import { gql } from "@apollo/client";
@@ -20,6 +21,7 @@ const fragmentsMap = {
   Info2Fragment: INFO_2_FRAGMENT,
   MarketingFragment: MARKETING_FRAGMENT,
   TestimonialFragment: TESTIMONIAL_FRAGMENT,
+  GetDemoFragment: GET_DEMO_FRAGMENT,
 };
 
 export type FragmentNames =
@@ -30,7 +32,8 @@ export type FragmentNames =
   | "OurMetrixFragment"
   | "Info2Fragment"
   | "MarketingFragment"
-  | "TestimonialFragment";
+  | "TestimonialFragment"
+  | "GetDemoFragment";
 
 export const createQuery = (fragmentName: FragmentNames) => {
   const fragment = fragmentsMap[fragmentName];

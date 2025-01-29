@@ -4,7 +4,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
-import Header from "@/components/Header";
+import { Header, Footer } from "@/components";
 import { SiteProvider } from "@/utils/context";
 import classNames from "classnames";
 import "@/styles/globals.css";
@@ -44,6 +44,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <Header />
             {children}
+            <Footer />
           </NextIntlClientProvider>
           <Overlay w="--half" />
         </SiteProvider>

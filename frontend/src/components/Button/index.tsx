@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
+
 interface ButtonProps {
   as: "button" | "link";
   url?: string;
@@ -21,6 +22,7 @@ const Button = ({
     md: "py-2 px-4",
     lg: "py-3 px-6",
   }[size];
+
   return (
     <>
       {as === "button" ? (

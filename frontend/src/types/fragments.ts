@@ -93,6 +93,11 @@ export interface Testimonial {
   }[];
 }
 
+export interface GetDemo {
+  title: string;
+  goTo: Button;
+}
+
 export interface LandingPage {
   main: Main;
   our_clients: OurClients;
@@ -113,7 +118,8 @@ export type SectionContent =
   | Info2
   | Marketing
   | Testimonial
-  | InfoActionType;
+  | InfoActionType
+  | GetDemo;
 
 export type SectionName =
   | "main"
@@ -123,4 +129,5 @@ export type SectionName =
   | "ourMetrix"
   | "info_2"
   | "marketing"
-  | "testimonial";
+  | "testimonial"
+  | "getDemo";

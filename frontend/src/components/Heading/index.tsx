@@ -10,7 +10,7 @@ const styles = {
   h1: "text-heading-36-44 md:text-heading-64-76 font-semibold text-mediumPrimary",
   h2: "text-heading-28-36 md:text-heading-36-44 font-semibold text-mediumPrimary",
   h3: "text-heading-24-28 md:text-heading-28-36 font-semibold text-mediumPrimary",
-  h4: "text-heading-28-36 md:text-heading-36-44 font-semibold text-mediumPrimary",
+  h4: "text-heading-18-20 md:text-heading-20-28 font-semibold text-mediumPrimary",
   h5: "text-heading-28-36 md:text-heading-36-44 font-semibold text-mediumPrimary",
   h6: "text-heading-28-36 md:text-heading-36-44 font-semibold text-mediumPrimary",
 };

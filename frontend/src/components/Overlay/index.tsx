@@ -8,7 +8,7 @@ const Overlay = ({ w }: { w: string }) => {
   return (
     <div
       className={classNames(
-        "absolute h-screen top-0 bg-black bg-opacity-50 z-50 w-1/2 transition-all duration-300",
+        "fixed h-screen top-0 bg-black bg-opacity-50 z-50 w-1/2 transition-all duration-300",
 
         isOpenMenu ? "left-0" : "-left-full"
       )}

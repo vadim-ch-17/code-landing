@@ -125,3 +125,15 @@ export const TESTIMONIAL_FRAGMENT = gql`
     }
   }
 `;
+
+export const GET_DEMO_FRAGMENT = gql`
+  fragment GetDemoFragment on LandingPage {
+    getDemo {
+      title
+      goTo {
+        link
+        text
+      }
+    }
+  }
+`;
