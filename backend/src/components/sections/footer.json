@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "social_link": {
+      "displayName": "Socials",
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.socials"
+    }
+  }
+}

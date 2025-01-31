@@ -11,6 +11,41 @@ export const GET_HEADER = gql`
   }
 `;
 
+export const GET_FOOTER = gql`
+  query Footer {
+    global {
+      footer {
+        logo {
+          url
+        }
+        copyright
+        social_link {
+          name
+          url
+          icon {
+            url
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const GET_FOOTER_NAVIGATION = gql`
+  query RenderNavigation(
+    $navigationIdOrSlug: String!
+    $type: NavigationRenderType
+  ) {
+    renderNavigation(navigationIdOrSlug: $navigationIdOrSlug, type: $type) {
+      items {
+        title
+        path
+      }
+      title
+    }
+  }
+`;
+
 // export const MAIN_QUERY = gql`
 //   query Main {
 //     landingPage {

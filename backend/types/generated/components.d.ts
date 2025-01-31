@@ -98,6 +98,18 @@ export interface SectionsDetailBox extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsFooter extends Struct.ComponentSchema {
+  collectionName: 'components_sections_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    copyright: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images' | 'files'>;
+    social_link: Schema.Attribute.Component<'sections.socials', true>;
+  };
+}
+
 export interface SectionsGoToAction extends Struct.ComponentSchema {
   collectionName: 'components_sections_go_to_actions';
   info: {
@@ -149,6 +161,18 @@ export interface SectionsManageCommunity extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsSocials extends Struct.ComponentSchema {
+  collectionName: 'components_sections_socials';
+  info: {
+    displayName: 'Socials';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files'>;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_sections_testimonials';
   info: {
@@ -174,10 +198,12 @@ declare module '@strapi/strapi' {
       'sections.cards-box': SectionsCardsBox;
       'sections.clients': SectionsClients;
       'sections.detail-box': SectionsDetailBox;
+      'sections.footer': SectionsFooter;
       'sections.go-to-action': SectionsGoToAction;
       'sections.key-metrics': SectionsKeyMetrics;
       'sections.main': SectionsMain;
       'sections.manage-community': SectionsManageCommunity;
+      'sections.socials': SectionsSocials;
       'sections.testimonials': SectionsTestimonials;
     }
   }

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_socials",
+  "info": {
+    "displayName": "Socials"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
