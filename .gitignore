@@ -145,4 +145,4 @@
 
 # Add directory backend to gitignore
 
-backend
+backend/
