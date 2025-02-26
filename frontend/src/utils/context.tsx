@@ -3,7 +3,12 @@ import React, { createContext, useContext, useState } from "react";
 
 export const Context = createContext(null);
 
-const SiteContext = createContext<any | undefined>(undefined);
+interface SiteContextType {
+  isOpenMenu: boolean;
+  setIsOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SiteContext = createContext<SiteContextType | undefined>(undefined);
 
 export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({
   children,

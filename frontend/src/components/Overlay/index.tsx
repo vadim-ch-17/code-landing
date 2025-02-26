@@ -3,7 +3,7 @@ import React from "react";
 import classNames from "classnames";
 import { useSiteContext } from "@/utils/context";
 
-const Overlay = ({ w }: { w: string }) => {
+const Overlay = () => {
   const { isOpenMenu, setIsOpenMenu } = useSiteContext();
   return (
     <div

@@ -107,6 +107,7 @@ export interface LandingPage {
   info_2: InfoActionType;
   marketing: Marketing;
   testimonial: Testimonial;
+  [key: string]: SectionContent;
 }
 
 export type SectionContent =
